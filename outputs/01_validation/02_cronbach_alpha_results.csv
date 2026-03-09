@@ -1,0 +1,6 @@
+Scale,Items,N,Cronbach_Alpha,Status
+Emotion (Actual),3,22,0.881,PASS
+Trust (Actual),2,22,0.197,FAIL
+Emotion (Heard),3,65,0.725,PASS
+Trust (Heard),3,65,0.859,PASS
+Choice Intent (Heard),3,65,0.651,ACCEPTABLE

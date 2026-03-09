@@ -1,0 +1,6 @@
+Scale,Floor_%,Ceiling_%,Status
+Emotion (Actual),4.55,22.73,WARN
+Trust (Actual),9.09,4.55,PASS
+Emotion (Heard),1.54,7.69,PASS
+Trust (Heard),1.54,15.38,WARN
+Choice Intent (Heard),1.54,4.62,PASS

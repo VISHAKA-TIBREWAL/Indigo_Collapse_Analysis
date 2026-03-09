@@ -1,0 +1,4 @@
+Group,Variable,N,Mean,SD,Min,Max
+Actual,Emotion,2,6.0,1.41,5.0,7.0
+Heard,Emotion,1,4.0,,4.0,4.0
+Heard,Choice Intent,1,4.0,,4.0,4.0

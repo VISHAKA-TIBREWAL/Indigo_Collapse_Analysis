@@ -1,0 +1,6 @@
+Score_Name,Extreme_Outliers_Count,Extreme_Outliers_Pct,Mild_Outliers_Count,Mild_Outliers_Pct
+Emotion_Actual,1,4.55,1,4.55
+Trust_Actual,0,0.0,0,0.0
+Emotion_Heard,0,0.0,1,1.54
+Trust_Heard,0,0.0,1,1.54
+Choice_Intent_Heard,0,0.0,1,1.54

@@ -1,0 +1,4 @@
+Path,With_Covariates_Coefficient,p_value,Significant
+a (Emotion→Trust),0.748417187527414,6.723990152211743e-05,Yes
+b (Trust→Choice),0.3632826737586741,6.125882988399808e-05,Yes
+Indirect Effect,0.271886996971906,,Yes

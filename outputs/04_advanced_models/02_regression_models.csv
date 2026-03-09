@@ -1,0 +1,4 @@
+Model,Predictors,Coefficient,Intercept,R_squared,Coefficient_E,Coefficient_T
+1. Emotion only,Emotion_Heard,0.3824,2.928,0.1207,,
+2. Trust only,Trust_Heard,0.4091,2.8799,0.3281,,
+3. Emotion + Trust,Both,,2.4279,0.3372,0.1183,0.3739
