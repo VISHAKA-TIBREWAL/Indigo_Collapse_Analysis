@@ -1,0 +1,2 @@
+Hypothesis,Test,Statistic,p_value,Effect_Size,Supported
+H1: Emotion differs by group,t-test,2.431,0.038,1.901,Yes

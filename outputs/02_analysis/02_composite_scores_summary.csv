@@ -1,6 +1,6 @@
 Score_Name,Items,N,Mean,SD,Min,Max
-Emotion_Actual,3,22,5.32,1.42,1.0,7.0
-Trust_Actual,3,22,4.24,1.39,1.0,6.33
-Emotion_Heard,3,65,5.34,1.03,2.33,7.0
-Trust_Heard,1,65,5.11,1.58,1.0,7.0
-Choice_Intent_Heard,3,65,4.97,1.13,1.67,7.0
+Emotion_Actual,3,46,5.37,1.35,1.0,7.0
+Trust_Actual,3,46,3.93,1.66,1.0,6.33
+Emotion_Heard,3,115,5.32,1.02,2.33,7.0
+Trust_Heard,1,115,4.94,1.65,1.0,7.0
+Choice_Intent_Heard,3,115,5.04,1.1,1.67,7.0

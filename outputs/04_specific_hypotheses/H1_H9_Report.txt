@@ -1,0 +1,49 @@
+ROBUST MULTIVARIABLE HYPOTHESIS TESTING REPORT (H1 - H9)
+==========================================================
+Methodology: Used robust OLS regressions strictly controlling for baseline Age and Gender to eliminate Simpson's Paradox and Omitted Variable Bias.
+
+[H1] Crisis exp increases emotional distress
+Method: Controlled OLS
+Beta_Exp: -0.1100, p-value: 1.0000 -> REJECTED
+Notes: R^2=0.016
+------------------------------------------------------------
+[H2] Distress neg. affects belief (Trust)
+Method: Controlled OLS
+Beta_Emo: 0.4623, p-value: 1.0000 -> REJECTED
+Notes: R^2=0.145
+------------------------------------------------------------
+[H3] Distress neg. affects trust
+Method: Controlled OLS (same as H2)
+Beta_Emo: 0.4623, p-value: 1.0000 -> REJECTED
+Notes: Refined methodology identical to H2
+------------------------------------------------------------
+[H4] Communication positively influences trust
+Method: Controlled OLS
+Beta_Comm: 0.5472, p-value: 0.0000 -> ACCEPTED
+Notes: R^2=0.645
+------------------------------------------------------------
+[H5] Comp positive but emo negative offset
+Method: Controlled Multi-OLS (Std)
+Beta_Comp: 0.1475, p-value: 0.1086 -> REJECTED
+Notes: Beta_Emo=-0.182 (p=0.068)
+------------------------------------------------------------
+[H6] Rel/Int/Comp -> Trust
+Method: Controlled Multiple OLS
+Min Beta: 0.3333, p-value: 0.0000 -> ACCEPTED
+Notes: B_rel=0.33, B_comp=0.33, B_int=0.33
+------------------------------------------------------------
+[H7] Trust -> Willingness to choose
+Method: Controlled OLS
+Beta_Trust: -0.2226, p-value: 1.0000 -> REJECTED
+Notes: R^2=0.109
+------------------------------------------------------------
+[H8] Trust mediates crisis exp and intent
+Method: Controlled Mediation
+Beta_Trust_PathB: -0.1607, p-value: 0.0066 -> ACCEPTED
+Notes: Partial Mediation (p_a=0.025, p_b=0.007)
+------------------------------------------------------------
+[H9] Trust stronger influence than compensation
+Method: Controlled Multi-OLS (Std)
+Beta_Trust: 0.4240, p-value: 0.0040 -> ACCEPTED
+Notes: Beta_Comp=-0.014 (p=1.000)
+------------------------------------------------------------

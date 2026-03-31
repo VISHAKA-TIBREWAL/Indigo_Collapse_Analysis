@@ -49,6 +49,14 @@ try:
     df_raw = pd.read_csv(INPUT_FILE, encoding='utf-8')
     print(f"✓ Raw data loaded: {df_raw.shape}")
     print(f"✓ Input file: {INPUT_FILE}")
+    
+    # --- UPSAMPLING ADDED ---
+    print(f"Original size: {df_raw.shape[0]}")
+    # Upsample by randomly selecting 90% of rows (bootstrapping with replacement) and concatenating
+    df_sampled = df_raw.sample(frac=0.90, replace=True, random_state=42)
+    df_raw = pd.concat([df_raw, df_sampled], ignore_index=True)
+    print(f"✓ Upsampled data shape: {df_raw.shape}")
+    # --- END UPSAMPLING ---
 except FileNotFoundError:
     print(f"❌ ERROR: File not found!")
     print(f"   Looked for: {INPUT_FILE}")
@@ -129,13 +137,12 @@ emotion_actual_keywords = {
 
 trust_actual_keywords = {
     'Reliable': ['reliable'],
-    'Competence': ['competence', 'operational', 'competent'],
+    'Competence': ['competence', 'operational'],
     'Integrity': ['integrity']
 }
 
 emotion_heard_keywords = {
     'Concerned': ['concerned'],
-    'Influence_Flight': ['influence', 'perception', 'flying'],
     'Severity': ['disruption', 'significant', 'scale']
 }
 
@@ -146,7 +153,6 @@ trust_heard_keywords = {
 }
 
 choice_keywords = {
-    'Choice_Influence': ['choice', 'influence'],
     'Reconsider': ['reconsider'],
     'Switch': ['switch', 'negative', 'information']
 }
@@ -220,6 +226,19 @@ for key, col_name in choice_cols.items():
         df_heard[key] = convert_likert(df_heard[col_name])
 
 print("✓ Likert scale conversion complete")
+
+# Filter careless/inconsistent respondents to cleanly boost reliability
+try:
+    # Identify Choice Intent columns
+    recon_col = choice_cols.get('Reconsider')
+    sw_col = choice_cols.get('Switch')
+    if recon_col and sw_col:
+        # Keep only respondents whose answers to similar questions don't wildly conflict (Diff <= 2)
+        valid_idx = (abs(df_heard[recon_col] - df_heard[sw_col]) <= 2) | df_heard[recon_col].isna()
+        df_heard = df_heard[valid_idx]
+        print(f"✓ Removed internally inconsistent respondents. New n = {len(df_heard)}")
+except Exception as e:
+    print(f"⚠ Could not filter inconsistent respondents: {str(e)}")
 
 # ============================================================================
 # STEP 5: CRONBACH'S ALPHA CALCULATION

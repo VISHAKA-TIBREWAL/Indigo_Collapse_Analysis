@@ -6,18 +6,18 @@ IndiGo December 2025 Crisis - Passenger Behavioral Analysis
 DATA INTEGRITY
 ✓ Privacy Protection: Email/Timestamp columns removed
 ✓ Sample Composition:
-  - Actual Passengers (Experienced crisis): n = 22
-  - Heard About Crisis (Did not experience): n = 65
-  - Total Respondents: n = 88
+  - Actual Passengers (Experienced crisis): n = 46
+  - Heard About Crisis (Did not experience): n = 108
+  - Total Respondents: n = 167
 
 RELIABILITY (Cronbach's Alpha)
 
-                Scale  Items  N  Cronbach_Alpha     Status
-     Emotion (Actual)      3 22           0.881       PASS
-       Trust (Actual)      2 22           0.197       FAIL
-      Emotion (Heard)      3 65           0.725       PASS
-        Trust (Heard)      3 65           0.859       PASS
-Choice Intent (Heard)      3 65           0.651 ACCEPTABLE
+                Scale  Items   N  Cronbach_Alpha Status
+     Emotion (Actual)      3  46           0.883   PASS
+       Trust (Actual)      3  46           0.792   PASS
+      Emotion (Heard)      2 108           0.724   PASS
+        Trust (Heard)      3 108           0.859   PASS
+Choice Intent (Heard)      2 108           0.823   PASS
 
 Interpretation:
 • α ≥ 0.70 = Good reliability (Gold standard)

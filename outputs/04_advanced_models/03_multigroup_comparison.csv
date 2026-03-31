@@ -1,3 +1,3 @@
 Group,N,Correlation,p_value,Significant
-Actual Passengers,7,0.461,0.298,No
-Heard Passengers,65,0.347,0.005,Yes
+Actual Passengers,9,0.307,0.422,No
+Heard Passengers,115,0.399,0.0,Yes

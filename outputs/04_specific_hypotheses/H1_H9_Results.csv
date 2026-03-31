@@ -1,0 +1,10 @@
+Hypothesis,Description,Method,Statistic_Type,Statistic,P-Value,Status,Notes
+H1,Crisis exp increases emotional distress,Controlled OLS,Beta_Exp,-0.10997927229739668,1.0,REJECTED,R^2=0.016
+H2,Distress neg. affects belief (Trust),Controlled OLS,Beta_Emo,0.462335101643237,1.0,REJECTED,R^2=0.145
+H3,Distress neg. affects trust,Controlled OLS (same as H2),Beta_Emo,0.462335101643237,1.0,REJECTED,Refined methodology identical to H2
+H4,Communication positively influences trust,Controlled OLS,Beta_Comm,0.5472175551635582,1.3817743582137765e-06,ACCEPTED,R^2=0.645
+H5,Comp positive but emo negative offset,Controlled Multi-OLS (Std),Beta_Comp,0.14750340692697497,0.10859038419096824,REJECTED,Beta_Emo=-0.182 (p=0.068)
+H6,Rel/Int/Comp -> Trust,Controlled Multiple OLS,Min Beta,0.3333333333333331,0.0,ACCEPTED,"B_rel=0.33, B_comp=0.33, B_int=0.33"
+H7,Trust -> Willingness to choose,Controlled OLS,Beta_Trust,-0.22257021289340437,1.0,REJECTED,R^2=0.109
+H8,Trust mediates crisis exp and intent,Controlled Mediation,Beta_Trust_PathB,-0.16071244114540686,0.006615361908843057,ACCEPTED,"Partial Mediation (p_a=0.025, p_b=0.007)"
+H9,Trust stronger influence than compensation,Controlled Multi-OLS (Std),Beta_Trust,0.42402221905214943,0.004008725555792343,ACCEPTED,Beta_Comp=-0.014 (p=1.000)

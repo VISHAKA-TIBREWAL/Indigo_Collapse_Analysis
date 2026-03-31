@@ -1,4 +1,4 @@
 Effect,Coefficient,p_value,Interpretation
-Emotion Main,0.3823693415116354,0.004786351642761963,Direct emotion effect
-Group Main,-1.03141502194612,0.709123577919766,Group effect on choice
-Emotion × Group (Interaction),0.25556169297111053,0.6237521836881843,Moderation - varies by group
+Emotion Main,0.4266383720367295,1.1282237180926832e-05,Direct emotion effect
+Group Main,0.4039937717056161,0.8632292375210808,Group effect on choice
+Emotion × Group (Interaction),-0.022792218190574587,0.9581887520115644,Moderation - varies by group

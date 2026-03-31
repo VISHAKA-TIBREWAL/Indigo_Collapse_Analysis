@@ -1,6 +1,6 @@
 Scale,N_Items,N_Cases,Max_Correlation,Status
-Emotion (Actual),3,22,0.804,ACCEPTABLE
-Trust (Actual),3,22,0.549,ACCEPTABLE
-Emotion (Heard),3,65,0.614,ACCEPTABLE
-Trust (Heard),1,65,0.0,ACCEPTABLE
-Choice Intent (Heard),3,65,0.528,ACCEPTABLE
+Emotion (Actual),3,46,0.777,ACCEPTABLE
+Trust (Actual),3,46,0.694,ACCEPTABLE
+Emotion (Heard),3,115,0.574,ACCEPTABLE
+Trust (Heard),1,115,0.0,ACCEPTABLE
+Choice Intent (Heard),3,115,0.539,ACCEPTABLE

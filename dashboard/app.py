@@ -81,7 +81,31 @@ elif page == "2. Composite Scores":
 
 elif page == "3. Hypothesis Testing":
     st.title("🧪 Hypothesis Testing Results")
-    st.markdown("### Test Outcomes")
+    
+    st.markdown("### Specific Hypotheses (H1 - H9)")
+    spec_dir = OUTPUTS_DIR / "04_specific_hypotheses"
+    
+    # Display the new hypotheses summary
+    h1_h9_df = load_data(spec_dir / "H1_H9_Results.csv")
+    if not h1_h9_df.empty:
+        st.dataframe(h1_h9_df.style.applymap(
+            lambda x: 'background-color: #d4edda; color: #155724; font-weight: bold' if x == 'ACCEPTED' 
+            else ('background-color: #f8d7da; color: #721c24; font-weight: bold' if x == 'REJECTED' else ''), 
+            subset=['Status']
+        ), use_container_width=True)
+        
+    # Display the mid-level statistics and explanations
+    with st.expander("Show Detailed Mid-Level Statistics & Explanations", expanded=False):
+        try:
+            with open(spec_dir / "H1_H9_Report.txt", 'r', encoding='utf-8') as f:
+                report_text = f.read()
+            st.text(report_text)
+        except Exception:
+            st.warning("Detailed explanations could not be loaded at this time.")
+            
+    st.markdown("---")
+    
+    st.markdown("### Original General Pipeline Overview")
     
     hyp_dir = OUTPUTS_DIR / "03_hypothesis"
     hyp_df = load_data(hyp_dir / "02_hypothesis_testing.csv")

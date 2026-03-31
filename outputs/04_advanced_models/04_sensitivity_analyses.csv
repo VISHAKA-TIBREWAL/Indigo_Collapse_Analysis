@@ -1,4 +1,4 @@
 Analysis,N,Correlation,p_value,Removed
-Full data,65,0.347,0.005,0
-Remove top/bottom 5%,57,0.349,0.008,8
-Windsorization,65,0.389,0.001,0 (clipped)
+Full data,115,0.399,0.0,0
+Remove top/bottom 5%,108,0.47,0.0,7
+Windsorization,115,0.436,0.0,0 (clipped)
